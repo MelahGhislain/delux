@@ -19,12 +19,12 @@ const CarouselSlider = ({items}) => {
                         </ButtonBack>
                         <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
                             <Slider>
-                                <div id="slider" className="h-full w-full flex lg:gap-8 md:gap-6 gap-6   items-center justify-start transition ease-out duration-700">
+                                <div id="slider" className="h-full w-full flex items-center justify-start transition ease-out duration-700">
                                     {
                                         items.map((item, index) => (
                                             <Slide index={index} key={index}>
                                                 <div className="flex flex-shrink-0 relative w-full">
-                                                    <img src={item.image} alt="black chair and white table" className="object-cover object-center w-full h-[25rem]" />
+                                                    <img src={item.image} alt="black chair and white table" className="object-cover object-center w-full h-[15rem] sm:h-[18rem] md:h-[20rem] lg:h-[25rem]" />
                                                 </div>
                                             </Slide>
                                         ))

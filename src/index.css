@@ -18,3 +18,7 @@
 .category-item:hover .item{
     @apply bg-orange-500 text-white 
 }
+
+.banner:hover .image{
+    @apply scale-110
+}

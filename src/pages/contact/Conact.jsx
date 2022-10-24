@@ -1,9 +1,9 @@
 import React from 'react'
-import ButtonNavBar from '../../components/ButtonNavBar'
+import ButtonNavBar from '../../components/NavBars/BottomNavBar'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import Hero from '../../components/Hero'
-import NavBar from '../../components/NavBar'
+import NavBar from '../../components/NavBars/NavBar'
 import ContactBody from './ContactBody'
 
 const Contact = () => {

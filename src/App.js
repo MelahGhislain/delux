@@ -11,12 +11,14 @@ import Account from "./pages/account/Account";
 import Login from "./pages/auth/Login";
 import FAQ from "./pages/faq/FAQ";
 import Contact from "./pages/contact/Conact";
+import MobileNavBar from "./components/NavBars/MobileNavBar";
 
 function App() {
   return (
-    <div className="App">
-       <Drawer />
+    <div className="App relative">
+      <Drawer />
       <CartDrawer />
+      <MobileNavBar />
       <BrowserRouter> 
         <Routes>
           <Route exact path="/" element={<Home />} />

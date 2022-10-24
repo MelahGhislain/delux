@@ -40,10 +40,10 @@ const items = [
 
 const Carousel = ({showCategory, setShowCategory}) => {
   return (  
-    <div className='px-4 md:px-10 flex h-[70vh]'>
-        <div className='w-60 lg:w-72 h-full'>
+    <div className='px-2 md:px-10 flex h-[15rem] sm:h-[18rem] md:h-[20rem] lg:h-[25rem] mt-2'>
+        <div className='hidden md:block w-52 lg:w-72 h-max'>
             {/* Toggle */}
-            <div className='py-3 px-4 flex justify-between w-full items-center bg-gradient-to-r from-orange-400 to-orange-500 text-white lg:hidden'>
+            <div className='py-3 px-4 flex justify-between w-full items-center bg-gradient-to-r from-orange-400 to-orange-500 text-white md:hidden'>
                 <p className='font-normal'>All Categories</p>
                 <span className='cursor-pointer' onClick={()=>setShowCategory(curr => !curr)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -51,7 +51,7 @@ const Carousel = ({showCategory, setShowCategory}) => {
                     </svg>
                 </span>
             </div>
-            <div className={`w-full transition-all duration-700 ${showCategory? "h-full": "h-0 hidden"} bg-white shadow-md`}>
+            <div className={`w-full transition-all duration-700 ${showCategory? "h-full": "h-0 overflow-hidden"} bg-white shadow-md`}>
                 <ul >
                     {
                         items.map((item, index) => (
