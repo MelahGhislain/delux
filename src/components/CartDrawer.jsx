@@ -10,7 +10,7 @@ const CartDrawer = () => {
     return (
       <>
       {openCartDrawer && <div className='flex h-screen fixed top-0 w-full z-50'>
-              <div className='bg-black/70 flex-auto' onClick={()=>setOpenCartDrawer(false)}></div>
+              <div className='bg-black/50 flex-auto' onClick={()=>setOpenCartDrawer(false)}></div>
               
               <div className='w-[25rem] bg-white flex flex-col h-full'>
                 {/* Header */}

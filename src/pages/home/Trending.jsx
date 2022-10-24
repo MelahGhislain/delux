@@ -93,12 +93,12 @@ const items = [
     
 ]
 
-const TopSavers = () => {
+const Trending = () => {
     const [products, setProducts] = useState(items)
   return (
-    <div className='my-10 px-4 md:px-10'>
+    <div className='my-10 md:my-16 px-4 md:px-10'>
         <div className='flex justify-between'>
-            <h2 className='text-lg font-bold flex items-center space-x-2'><p>Top Savers Today</p> <Badge text="20% OFF" bg="bg-blue-700 text-white" /> </h2>
+            <h2 className='text-lg font-bold flex items-center space-x-2'><p>TRENDING ITEMS</p> <Badge text="20% OFF" bg="bg-blue-700 text-white" /> </h2>
             <p className='text-sm text-green-500 font-normal'>View All</p>
         </div>
         <div className='py-2'>
@@ -115,4 +115,4 @@ const TopSavers = () => {
   )
 }
 
-export default TopSavers
+export default Trending

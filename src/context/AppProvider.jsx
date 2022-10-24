@@ -5,9 +5,10 @@ import AppContext from './AppContext'
 const ContextProvider = ({children}) => {
     const [openDrawer, setOpenDrawer] = useState(false)
     const [openCartDrawer, setOpenCartDrawer] = useState(false)
+    const [mobileNavBar, setMobileNavBar] = useState(false)
     
   return (
-    <AppContext.Provider value={{openDrawer, setOpenDrawer, openCartDrawer, setOpenCartDrawer}}>
+    <AppContext.Provider value={{openDrawer, setOpenDrawer, openCartDrawer, setOpenCartDrawer, mobileNavBar, setMobileNavBar}}>
         {children}
     </AppContext.Provider>
   )

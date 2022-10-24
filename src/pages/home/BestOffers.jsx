@@ -98,9 +98,13 @@ const BestOffers
     const [products, setProducts] = useState(items)
   return (
     <div className='my-10 px-4 md:px-10'>
-        <div className='flex justify-between'>
-            <h2 className='text-lg font-bold flex items-center space-x-2'><p>Best Offers View</p> <Badge text="20% OFF" bg="bg-teal-500 text-white" /> </h2>
-            <p className='text-sm text-green-500 font-normal'>View All</p>
+        <div className='flex md:justify-between flex-col md:flex-row space-y-3'>
+            <h2 className='text-lg font-bold flex items-center space-x-2'><p>EXCLUSIVE PRODUCTS</p> <Badge text="20% OFF" bg="bg-teal-500 text-white" /> </h2>
+            <div className='flex items-center space-x-4 border-b md:border-b-0'>
+                <p className='text-sm text-white font-normal cursor-pointer bg-gradient-to-r from-orange-400 to-orange-500 px-2 py-2 rounded'>New Arrivals</p>
+                <p className='text-sm text-green-500 font-normal cursor-pointer'>Special Offer</p>
+                <p className='text-sm text-green-500 font-normal cursor-pointer'>Bets Seller</p>
+            </div>
         </div>
         <div className='py-2'>
             <div className='w-full grid items-center grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] md:gap-x-6 gap-y-6'>

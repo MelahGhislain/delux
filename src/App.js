@@ -9,12 +9,16 @@ import ProductDetail from "./pages/product-detail/ProductDetail";
 import Checkout from "./pages/checkout/Checkout";
 import Account from "./pages/account/Account";
 import Login from "./pages/auth/Login";
+import FAQ from "./pages/faq/FAQ";
+import Contact from "./pages/contact/Conact";
+import MobileNavBar from "./components/NavBars/MobileNavBar";
 
 function App() {
   return (
-    <div className="App">
-       <Drawer />
+    <div className="App relative">
+      <Drawer />
       <CartDrawer />
+      <MobileNavBar />
       <BrowserRouter> 
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -23,6 +27,8 @@ function App() {
           <Route  path="products" element={<Products /> } />
           <Route  path="product-detail" element={<ProductDetail /> } />
           <Route  path="checkout" element={<Checkout /> } />
+          <Route  path="contact" element={<Contact /> } />
+          <Route  path="faq" element={<FAQ /> } />
           <Route  path="account" element={<Account /> } />
           <Route  path="login" element={<Login /> } />
         </Routes>
