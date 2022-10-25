@@ -5,7 +5,7 @@ const Drawer = () => {
     const {openDrawer, setOpenDrawer} = useContext(AppContext)
   return (
     <>
-    {openDrawer && <div className='z-50 fixed w-full min-h-screen flex '>
+    {openDrawer && <div className='z-50 absolute top-0 bottom-0 w-full min-h-screen flex '>
             <div className='w-[18rem] bg-white'>
                 <div className='flex justify-center items-center bg-teal-500 p-3'>
                     <a href="/">
