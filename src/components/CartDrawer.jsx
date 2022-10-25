@@ -9,7 +9,7 @@ const CartDrawer = () => {
     
     return (
       <>
-      {openCartDrawer && <div className='flex h-screen fixed top-0 w-full z-50'>
+      {openCartDrawer && <div className='flex h-screen absolute top-0 bottom-0 w-full z-50'>
               <div className='bg-black/50 flex-auto' onClick={()=>setOpenCartDrawer(false)}></div>
               
               <div className='w-[25rem] bg-white flex flex-col h-full'>

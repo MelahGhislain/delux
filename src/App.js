@@ -12,6 +12,9 @@ import Login from "./pages/auth/Login";
 import FAQ from "./pages/faq/FAQ";
 import Contact from "./pages/contact/Conact";
 import MobileNavBar from "./components/NavBars/MobileNavBar";
+import Admin from "./pages/admin/Admin";
+import AdminProductDetail from "./pages/admin/AdminProductDetail";
+import AdminProducts from "./pages/admin/AdminProducts";
 
 function App() {
   return (
@@ -31,6 +34,13 @@ function App() {
           <Route  path="faq" element={<FAQ /> } />
           <Route  path="account" element={<Account /> } />
           <Route  path="login" element={<Login /> } />
+
+          {/* Admin */}
+          <Route  path="admin" element={<Admin /> } />
+          <Route  path="admin/products" element={<AdminProducts /> } />
+          <Route  path="admin/product-detail" element={<AdminProductDetail /> } />
+          
+
         </Routes>
       </BrowserRouter>
     </div>

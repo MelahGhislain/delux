@@ -5,7 +5,7 @@ const MobileNavBar = () => {
     const {mobileNavBar, setMobileNavBar} = useContext(AppContext)
   return (
     <>
-        {mobileNavBar && <div className='z-50 top-0 absolute w-full min-h-screen flex md:hidden'>
+        {mobileNavBar && <div className='z-50 top-0 bottom-0 absolute w-full min-h-screen flex md:hidden'>
             <div className='w-[15rem] bg-white'>
                 <div className='flex justify-start items-center bg-teal-500 p-3 py-3.5'>
                     <a href="/">

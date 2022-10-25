@@ -22,3 +22,13 @@
 .banner:hover .image{
     @apply scale-110
 }
+.nav-item:hover .nav-indicator{
+ @apply bg-white
+}
+.checkbox:checked {
+    @apply right-0 bg-black outline-none;
+}
+.checkbox:checked + .toggle-label {
+  @apply bg-green-500 border-0;
+}
+                   
