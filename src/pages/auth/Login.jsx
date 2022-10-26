@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Login() {
-    const [sidebar, setsidebar] = useState();
     return (
         <div className="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
             <div className="flex flex-col items-center justify-center">

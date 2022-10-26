@@ -15,6 +15,10 @@ import MobileNavBar from "./components/NavBars/MobileNavBar";
 import Admin from "./pages/admin/Admin";
 import AdminProductDetail from "./pages/admin/AdminProductDetail";
 import AdminProducts from "./pages/admin/AdminProducts";
+import AdminOrders from "./pages/admin/AdminOrders";
+import Invoice from "./pages/admin/Invoice";
+import Categoty from "./pages/admin/Category";
+import Customers from "./pages/admin/Customer";
 
 function App() {
   return (
@@ -38,6 +42,10 @@ function App() {
           {/* Admin */}
           <Route  path="admin" element={<Admin /> } />
           <Route  path="admin/products" element={<AdminProducts /> } />
+          <Route  path="admin/orders" element={<AdminOrders /> } />
+          <Route  path="admin/invoice" element={<Invoice /> } />
+          <Route  path="admin/category" element={<Categoty /> } />
+          <Route  path="admin/customers" element={<Customers /> } />
           <Route  path="admin/product-detail" element={<AdminProductDetail /> } />
           
 

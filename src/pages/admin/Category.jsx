@@ -1,43 +1,38 @@
 import React, { useContext, useEffect, useState } from 'react'
 // import ReactTooltip from 'react-tooltip';
-import NewProductDrawer from './components/NewProductDrawer'
+import CategoryDrawer from './components/CategoryDrawer'
 import sofa from '../../assets/images/png/png7.png'
 import AdminLayout from './components/AdminLayout';
 import AppContext from '../../context/AppContext';
 
-const AdminProducts = () => {
-    const [newProduct, setNewProduct] = useState(false)
+const Categoty = () => {
+    const [newCategory, setNewCategory] = useState(false)
     const {setAdminNav} = useContext(AppContext)
 
     useEffect(()=>{
-        setAdminNav('products')
+        setAdminNav('category')
     }, [])
   return (
     <AdminLayout>
       <div className='px-6 py-6 overflow-hidden'>
-          <NewProductDrawer newProduct={newProduct} setNewProduct={setNewProduct} />
-          <h1 className='text-2xl font-bold text-gray-800'>Products</h1>
+          <CategoryDrawer newCategory={newCategory} setNewCategory={setNewCategory} />
+          <h1 className='text-2xl font-bold text-gray-800'>Category</h1>
           <div className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center mt-4'>
-              <input type="text" className='px-3 py-2 border border-gray-200 rounded-md placeholder:text-sm placeholder:text-gray-400 w-full' placeholder='Search product by name'/>
+              <input type="text" className='px-3 py-2 border border-gray-200 rounded-md placeholder:text-sm placeholder:text-gray-400 w-full' placeholder='Search by category type'/>
               <select id="countries" class="px-3 py-2 border border-gray-200 text-gray-500 rounded-md placeholder:text-sm placeholder:text-gray-400 w-full" placeholder=''>
                 <option value='' className='text-gray-400 text-sm'>Category</option>
-                <option value='delivered' className='text-gray-400 text-sm'>Delivered</option>
+                <option value='Sofa' className='text-gray-400 text-sm'>Sofa</option>
                 <option value="pending" className='text-gray-400 text-sm'>Pending</option>
                 <option value="processing" className='text-gray-400 text-sm'>Processing</option>
                 <option value="cancel" className='text-gray-400 text-sm'>Cancel</option>
               </select>
-              <select id="countries" class="px-3 py-2 border border-gray-200 text-gray-500 rounded-md placeholder:text-sm placeholder:text-gray-400 w-full" placeholder='Status'>
-                <option value='' className='text-gray-400 text-sm'>Price</option>
-                <option value="l-to-h" className='text-gray-400 text-sm'>Low to High</option>
-                <option value="h-to-l" className='text-gray-400 text-sm'>High to Low</option>
-              </select>
-              <button className='flex-none flex items-center w-full md:w-max space-x-2 text-white text-xs px-8 py-3 bg-green-500 rounded-md' onClick={()=>setNewProduct(true)}>
+              <button className='flex-none flex items-center w-full md:w-max space-x-2 text-white text-xs px-8 py-3 bg-green-500 rounded-md' onClick={()=>setNewCategory(true)}>
                   <span className=''>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                       <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                       </svg>
                   </span>
-                  <p>Add Product</p>
+                  <p>Add Category</p>
               </button>
           </div>
 
@@ -47,28 +42,19 @@ const AdminProducts = () => {
                       <thead className="text-xs text-gray-700 uppercase bg-gray-50 border-b">
                           <tr>
                               <th scope="col" className="py-3 px-6">
-                              SKU
+                              ID
                               </th>
                               <th scope="col" className="py-3 px-6">
-                              PRODUCT NAME
+                              ICON
                               </th>
                               <th scope="col" className="py-3 px-6">
-                              CATEGORY
+                              PARENT
                               </th>
                               <th scope="col" className="py-3 px-6">
-                              PRICE
+                              CHILDREN
                               </th>
                               <th scope="col" className="py-3 px-6">
-                              STOCK
-                              </th>
-                              <th scope="col" className="py-3 px-6">
-                              STATUS
-                              </th>
-                              <th scope="col" className="py-3 px-6">
-                              DISCOUNT
-                              </th>
-                              <th scope="col" className="py-3 px-6">
-                              DETAILS
+                              TYPE
                               </th>
                               <th scope="col" className="py-3 px-6">
                               PUBLISHED
@@ -79,13 +65,13 @@ const AdminProducts = () => {
                           </tr>
                       </thead>
                       <tbody>
-                          <SingleProduct setNewProduct={setNewProduct} />
-                          <SingleProduct setNewProduct={setNewProduct} />
-                          <SingleProduct setNewProduct={setNewProduct} />
-                          <SingleProduct setNewProduct={setNewProduct} />
-                          <SingleProduct setNewProduct={setNewProduct} />
-                          <SingleProduct setNewProduct={setNewProduct} />
-                          <SingleProduct setNewProduct={setNewProduct} /> 
+                          <SingleProduct setNewCategory={setNewCategory} />
+                          <SingleProduct setNewCategory={setNewCategory} />
+                          <SingleProduct setNewCategory={setNewCategory} />
+                          <SingleProduct setNewCategory={setNewCategory} />
+                          <SingleProduct setNewCategory={setNewCategory} />
+                          <SingleProduct setNewCategory={setNewCategory} />
+                          <SingleProduct setNewCategory={setNewCategory} /> 
                           
                       </tbody>
                   </table>
@@ -131,46 +117,28 @@ const AdminProducts = () => {
   )
 }
 
-function SingleProduct({setNewProduct}){
+function SingleProduct({setNewCategory}){
   return (
     <tr className="bg-white border-b ">
         <th scope="row" className="py-0 px-6 font-medium">
-          9AF4FE
+        2845
         </th>
         <td className="py-0 px-6 font-light">
-          <div className='flex items-center space-x-3'>
             <div className='h-10 w-10 rounded-full bg-gray-200'>
               <img src={sofa} alt="sofa" className="h-full w-full "/>
             </div>
-
-          <p className='w-max'>Green Leaf Lettuce</p>
-          </div>
         </td>
         <td className="py-0 px-6 font-light">
-          <p className='w-max'>Fruits & Vegetable</p>
+            <div className='flex items-center space-x-4 text-white'>
+                <p className='text-xs px-2 py-0.5 bg-gray-400 rounded-full'>Sofa</p>
+                <p className='text-xs px-2 py-0.5 bg-gray-400 rounded-full'>Chair</p>
+            </div>
         </td>
         <td className="py-0 px-6 font-light">
-          $14
+          2
         </td>
         <td className="py-0 px-6 font-light ">
-          15
-        </td>
-        <td className="py-0 px-6">
-            <p className='bg-green-400 text-white text-xs py-0.5 px-4 rounded-full'>Selling</p>
-        </td>
-
-        <td className="py-0 px-6">
-            
-        </td>
-
-        <td className="py-0 px-6">
-          <a href="/admin/product-detail">
-            <span className='cursor-pointer'> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-                <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V2.5zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5h-1zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V4zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V3zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14z"/>
-              </svg>
-            </span>
-          </a>
+          Couch
         </td>
 
         <td className="py-0 px-6">
@@ -180,9 +148,9 @@ function SingleProduct({setNewProduct}){
             </div>
         </td>
 
-        <td>
+        <td className="py-0 px-6">
           <div className='flex items-center space-x-4'>
-            <span className='cursor-pointer' onClick={()=>setNewProduct(true)}>
+            <span className='cursor-pointer' onClick={()=>setNewCategory(true)}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
@@ -201,5 +169,5 @@ function SingleProduct({setNewProduct}){
 
 
 
-export default AdminProducts
+export default Categoty
 
