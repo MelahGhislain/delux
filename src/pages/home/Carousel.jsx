@@ -1,38 +1,38 @@
-import React from 'react'
-import couch9 from "../../assets/images/sofa/sofa.jpeg"
-import couch11 from "../../assets/images/couch/couch4.jpeg"
 import CarouselSlider from '../../components/CarouselSlider';
-import couch from "../../assets/images/couch/couch8.jpeg"
-import chair from "../../assets/images/chair/chair.jpeg"
-import bed from "../../assets/images/bed/bed1.jpeg"
+import png1 from "../../assets/images/png/png1.png"
+import png2 from "../../assets/images/png/png2.png"
+import png3 from "../../assets/images/png/png3.png"
+import png4 from "../../assets/images/png/png4.png"
+import png5 from "../../assets/images/png/png5.png"
+import png6 from "../../assets/images/png/png6.png"
 const items = [
     {
-        image: couch,
+        image: png1,
         title: "Couch",
         qty: "2"
     },
     {
-        image: chair,
+        image: png2,
         title: "Chairs",
         qty: "10"
     },
     {
-        image: bed,
+        image: png3,
         title: "Beds",
         qty: "8"
     },
     {
-        image: couch,
+        image: png4,
         title: "Couch",
         qty: "2"
     },
     {
-        image: chair,
+        image: png5,
         title: "Chairs",
         qty: "10"
     },
     {
-        image: bed,
+        image: png6,
         title: "Beds",
         qty: "8"
     },
@@ -62,7 +62,7 @@ const Carousel = ({showCategory, setShowCategory}) => {
                 </ul>
             </div>
         </div>
-        <div className=' flex-1 md:ml-8 h-full'>
+        <div className=' flex-1 md:ml-8 h-full bg-white'>
             <CarouselSlider items={items} />
         </div>
     </div>

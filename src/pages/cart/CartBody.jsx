@@ -27,6 +27,7 @@ const items = [
 ]
 
 const CartBody = () => {
+    // eslint-disable-next-line no-unused-vars
     const [cartItems, setCartItems] = useState(items)
     const [adress, setAdress] = useState(false)
   return (

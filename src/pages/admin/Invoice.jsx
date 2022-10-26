@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 // import ReactTooltip from 'react-tooltip';
-import sofa from '../../assets/images/png/png7.png'
 import AdminLayout from './components/AdminLayout';
 import AppContext from '../../context/AppContext';
 
@@ -10,6 +9,7 @@ const Invoice = () => {
 
     useEffect(()=>{
         setAdminNav('orders')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
   return (
     <AdminLayout>

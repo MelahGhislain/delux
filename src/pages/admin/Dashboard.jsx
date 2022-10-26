@@ -2,6 +2,7 @@ import React from 'react'
 import DashboardChart from './components/DashboardChart'
 import DashboardPieChart from './components/DashboardPieChart'
 import DashboradCard from './components/DashboradCard'
+import RecentOrder from './components/RecentOrder'
 
 const Dashboard = () => {
   return (
@@ -103,6 +104,11 @@ const Dashboard = () => {
                 <DashboardPieChart />
             </div>
             
+          </div>
+
+          {/* Recent Order */}
+          <div className='my-20'>
+            <RecentOrder />
           </div>
 
         </div>

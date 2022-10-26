@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -24,7 +24,7 @@ const CarouselSlider = ({items}) => {
                                         items.map((item, index) => (
                                             <Slide index={index} key={index}>
                                                 <div className="flex flex-shrink-0 relative w-full">
-                                                    <img src={item.image} alt="black chair and white table" className="object-cover object-center w-full h-[15rem] sm:h-[18rem] md:h-[20rem] lg:h-[25rem]" />
+                                                    <img src={item.image} alt="black chair and white table" className="object-contain object-center w-full h-[15rem] sm:h-[18rem] md:h-[20rem] lg:h-[25rem]" />
                                                 </div>
                                             </Slide>
                                         ))
