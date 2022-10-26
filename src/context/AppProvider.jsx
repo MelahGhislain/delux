@@ -7,7 +7,7 @@ const ContextProvider = ({children}) => {
     const [openCartDrawer, setOpenCartDrawer] = useState(false)
     const [mobileNavBar, setMobileNavBar] = useState(false)
     const [adminNav, setAdminNav] = useState('dashboard')
-    const [currPage, setCurrPage] = useState('dashboard')
+    const [currPage, setCurrPage] = useState('home')
     
   return (
     <AppContext.Provider value={{openDrawer, setOpenDrawer, openCartDrawer, 
