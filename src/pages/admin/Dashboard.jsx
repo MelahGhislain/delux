@@ -1,4 +1,6 @@
 import React from 'react'
+import DashboardChart from './components/DashboardChart'
+import DashboardPieChart from './components/DashboardPieChart'
 import DashboradCard from './components/DashboradCard'
 
 const Dashboard = () => {
@@ -44,6 +46,7 @@ const Dashboard = () => {
               />
           </div>
 
+          {/* Dashboard order statuses */}
           <div className='w-full my-8 grid items-center grid-cols-[repeat(auto-fit,_minmax(14rem,_1fr))] md:gap-x-6 gap-y-8'>
               <MiniCard
                 icon={
@@ -86,6 +89,20 @@ const Dashboard = () => {
                 text="75"
                 color="bg-green-500"
               />
+          </div>
+                
+          {/* charts */}
+          <div className='flex items-center md:space-x-8 flex-col md:flex-row space-y-8 md:space-y-0'>
+            <div className='flex-1'>
+              <h2 className='text-gray-700 text-xl font-bold py-8 px-16'>Weekly Sales</h2>
+              <DashboardChart />
+            </div>
+
+            <div className='flex-1'>
+                <h2 className='text-gray-700 text-xl font-bold py-8 px-16'>Best Selling Products</h2>
+                <DashboardPieChart />
+            </div>
+            
           </div>
 
         </div>
