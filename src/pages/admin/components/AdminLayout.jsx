@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AdminNavBar from '../components/AdminNavBar'
-import SideNav from '../SideNav'
+import SideNav from './SideNav'
 
 const AdminLayout = ({children}) => {
     const [sideNav, setSideNav] = useState(true)
@@ -11,7 +11,7 @@ const AdminLayout = ({children}) => {
         </div>
         <div className='relative h-screen overflow-y-auto flex-auto bg-neutral-100'>
             <AdminNavBar setSideNav={setSideNav} />
-
+            
             {children}
             
         </div>

@@ -4,8 +4,6 @@ import png3 from '../../assets/images/png/png3.png'
 import Badge from '../../components/Badge'
 import NewProductDrawer from './components/NewProductDrawer'
 import AppContext from '../../context/AppContext'
-
-import sofa from '../../assets/images/png/png2.png'
 import img1 from '../../assets/images/png/png1.png'
 import img2 from '../../assets/images/png/png2.png'
 import img3 from '../../assets/images/png/png3.png'
@@ -85,6 +83,7 @@ const AdminProductDetail = () => {
 
     useEffect(()=>{
         setAdminNav('products')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
   return (
     <AdminLayout>

@@ -20,50 +20,70 @@ const NewProductDrawer = ({newProduct, setNewProduct}) => {
                 </div>
 
                 <div className='px-4 my-4 overflow-y-auto'>
+                    <div className='flex items-start my-7'>
+                            <label htmlFor="product_sku" className='w-[13rem] text-gray-600 font-light '>Product Image</label>
+                            <div class="w-full">
+                                <label
+                                    className="flex justify-center w-full h-32 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer focus:outline-none">
+                                    <span className="flex items-center space-x-2 text-gray-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <span className="font-light text-sm text-gray-400">
+                                            Drop files to Attach, or
+                                            <span className="text-blue-600 "> browse</span>
+                                        </span>
+                                    </span>
+                                    <input type="file" name="file_upload" className="hidden" />
+                                </label>
+                            </div>
+                        </div>
                 
                     <div className='flex items-start my-7'>
-                        <label htmlFor="product_sku" className='w-[10rem] text-gray-600 font-light '>Product SKU</label>
-                        <input type="text" name='product_sku' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product SKU' />
+                        <label htmlFor="product_sku" className='w-[13rem] text-gray-600 font-light '>Product SKU</label>
+                        <input type="text" name='product_sku' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product SKU' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="product_title" className='w-[10rem] text-gray-600 font-light '>Product Title</label>
-                        <input type="text" name='product_title' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product Title' />
+                        <label htmlFor="product_title" className='w-[13rem] text-gray-600 font-light '>Product Title</label>
+                        <input type="text" name='product_title' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product Title' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="product_slug" className='w-[10rem] text-gray-600 font-light '>Product Slug</label>
-                        <input type="text" name='product_slug' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product Slug' />
+                        <label htmlFor="product_slug" className='w-[13rem] text-gray-600 font-light '>Product Slug</label>
+                        <input type="text" name='product_slug' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product Slug' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="product_description" className='w-[10rem] text-gray-600 font-light '>Product Description</label>
-                        <textarea name='product_description' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product details' rows='3'></textarea>
+                        <label htmlFor="product_description" className='w-[13rem] text-gray-600 font-light '>Product Description</label>
+                        <textarea name='product_description' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product details' rows='3'></textarea>
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="parent_category" className='w-[10rem] text-gray-600 font-light '>Parent Category</label>
-                        <input type="text" name='parent_category' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='' />
+                        <label htmlFor="parent_category" className='w-[13rem] text-gray-600 font-light '>Parent Category</label>
+                        <input type="text" name='parent_category' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="child_category" className='w-[10rem] text-gray-600 font-light '>Child Category</label>
-                        <input type="text" name='child_category' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='' />
+                        <label htmlFor="child_category" className='w-[13rem] text-gray-600 font-light '>Child Category</label>
+                        <input type="text" name='child_category' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="product_type" className='w-[10rem] text-gray-600 font-light '>Product Type</label>
-                        <input type="text" name='product_type' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Select type' />
+                        <label htmlFor="product_type" className='w-[13rem] text-gray-600 font-light '>Product Type</label>
+                        <input type="text" name='product_type' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Select type' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="quantity" className='w-[10rem] text-gray-600 font-light '>Quantity</label>
-                        <input type="number" name='quantity' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='' />
+                        <label htmlFor="quantity" className='w-[13rem] text-gray-600 font-light '>Quantity</label>
+                        <input type="number" name='quantity' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="product_price" className='w-[10rem] text-gray-600 font-light '>Product Price</label>
-                        <input type="number" name='product_price' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product Price' />
+                        <label htmlFor="product_price" className='w-[13rem] text-gray-600 font-light '>Product Price</label>
+                        <input type="number" name='product_price' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product Price' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="sales_price" className='w-[10rem] text-gray-600 font-light '>Sales Price</label>
-                        <input type="number" name='sales_price' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Sales Price' />
+                        <label htmlFor="sales_price" className='w-[13rem] text-gray-600 font-light '>Sales Price</label>
+                        <input type="number" name='sales_price' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Sales Price' />
                     </div>
                     <div className='flex items-start my-7'>
-                        <label htmlFor="product_tag" className='w-[10rem] text-gray-600 font-light '>Product Tag</label>
-                        <input type="text" name='product_tag' className='flex-auto border border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product tag (write press enter to add)' />
+                        <label htmlFor="product_tag" className='w-[13rem] text-gray-600 font-light '>Product Tag</label>
+                        <input type="text" name='product_tag' className='flex-auto border w-full border-gray-200 rounded-md outline-none px-2 py-3 placeholder:text-sm placeholder:text-gray-400' placeholder='Product tag (write press enter to add)' />
                     </div>
                 </div>
 

@@ -95,6 +95,7 @@ const items = [
 
 const BestOffers
  = () => {
+    // eslint-disable-next-line no-unused-vars
     const [products, setProducts] = useState(items)
   return (
     <div className='my-10 px-4 md:px-10'>

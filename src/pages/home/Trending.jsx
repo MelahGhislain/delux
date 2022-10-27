@@ -94,6 +94,7 @@ const items = [
 ]
 
 const Trending = () => {
+    // eslint-disable-next-line no-unused-vars
     const [products, setProducts] = useState(items)
   return (
     <div className='my-10 md:my-16 px-4 md:px-10'>

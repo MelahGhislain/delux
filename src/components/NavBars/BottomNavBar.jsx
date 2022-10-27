@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '../../context/AppContext'
 
 const BottomNavBar
- = ({toggle, setShowCategory, category}) => {
+ = ({setShowCategory, category}) => {
 
   return (
     <>
@@ -16,24 +17,25 @@ const BottomNavBar
                 </span>
             </div>}
           <ul className='text-gray-500 text-gray text-sm flex items-center ml-5'>
-              <a href="/">
-                <li className='px-4 py-4 transition-all duration-500 bg-gradient-to-r cursor-pointer hover:from-orange-400 hover:to-orange-500 hover:text-white'>Home</li>
-              </a>
-              <a href="/about">
-                <li className='px-4 py-4 transition-all duration-500 bg-gradient-to-r cursor-pointer hover:from-orange-400 hover:to-orange-500 hover:text-white'>About</li>
-            </a>
-            <a href="/products">
-              <li className='px-4 py-4 transition-all duration-500 bg-gradient-to-r cursor-pointer hover:from-orange-400 hover:to-orange-500 hover:text-white'>Products</li>
-            </a>
-            <a href="/contact">
-              <li className='px-4 py-4 transition-all duration-500 bg-gradient-to-r cursor-pointer hover:from-orange-400 hover:to-orange-500 hover:text-white'>Contact</li>
-            </a>
-            <a href="/faq">
-              <li className='px-4 py-4 transition-all duration-500 bg-gradient-to-r cursor-pointer hover:from-orange-400 hover:to-orange-500 hover:text-white'>FAQ</li>
-            </a>
+              <ItemNav page="Home" />
+              <ItemNav page="About" />
+              <ItemNav page="Products" />
+              <ItemNav page="Contact" />
+              <ItemNav page="Blog" />
+              <ItemNav page="FAQ" />
           </ul>
         </div>
     </>
+  )
+}
+
+function ItemNav({page}){
+  const {currPage, setCurrPage} = useContext(AppContext)
+  const route = page === "Home"? '/' : `/${page.toLowerCase()}`
+  return (
+    <a href={route} onClick={()=>setCurrPage(page.toLowerCase())}>
+      <li className={`px-4 py-4 transition-all duration-500 bg-gradient-to-r cursor-pointer  ${currPage === page.toLowerCase()? "from-orange-400 to-orange-500 text-white" : "hover:from-orange-400 hover:to-orange-500 hover:text-white"}`} >{page}</li>
+    </a>
   )
 }
 
